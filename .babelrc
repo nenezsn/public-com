@@ -1,0 +1,22 @@
+{
+    "presets":[
+        "env",
+        "react",
+        "stage-1"
+    ],
+    "env":{
+        "production":{
+            "plubins":["transform-react-constant-elements"]
+        }
+    },
+    "plugins": [ 
+        ["transform-remove-console", { "exclude": [ "error", "warn","log"] }],
+        ["import",{"libraryName": "antd", "libraryDirectory": "es", "style": "css"}],
+        ["transform-runtime",{
+            "helpers": false,
+            "polyfill": false,
+            "regenerator": true,
+            "moduleName": "babel-runtime"
+            }]
+     ]
+}
